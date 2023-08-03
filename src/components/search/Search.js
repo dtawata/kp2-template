@@ -1,5 +1,5 @@
 import styles from './Search.module.css';
-import React, { useState, useRef, useEffect, useReducer } from 'react';
+import React, { Fragment, useState, useRef, useEffect, useReducer } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faUser } from '@fortawesome/free-solid-svg-icons';
@@ -15,8 +15,15 @@ const Search = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { data } = await axios.get('/api/accounts');
-    setAccounts(data);
+    if (!options.manager && !options.year && !options.zipcode && !options.stage) {
+      const { data } = await axios.get('/api/accounts');
+      setAccounts(data);
+    } else {
+      const { data } = await axios.get('/api/accounts/filter', {
+        params: options
+      });
+      setAccounts(data);
+    }
   };
 
   const handleChange = (e) => {
@@ -29,22 +36,21 @@ const Search = (props) => {
   };
 
   useEffect(() => {
-    console.log('options', options);
-  }, [options])
+    console.log('accounts', accounts);
+  }, [accounts])
 
   return (
     <div className={styles.container}>
       <form>
-        <div>{options.manager}{options.zipcode}</div>
         <input onChange={handleChange} className={styles.input} type='text' name='manager' value={options.manager} placeholder='Account Manager' />
         <input onChange={handleChange} className={styles.input} type='number' name='year' value={options.year} placeholder='Year' />
         <input onChange={handleChange} className={styles.input} type='number' name='zipcode' value={options.zipcode} placeholder='ZIP Code' />
         <select onChange={handleChange} className={styles.select} name='stage' value={options.stage}>
         <option value='' disabled>Stage</option>
-          <option value='priority'>Priority</option>
+          <option value=''>All</option>
           <option value='engage'>Engage</option>
           <option value='familiarize'>Familiarize</option>
-          <option value='initialize'>Initialize</option>
+          <option value='initiate'>Initiate</option>
         </select>
         <button onClick={handleSubmit} className={styles.button}>Search</button>
       </form>
@@ -62,14 +68,18 @@ const Account = (props) => {
 
   return (
     <div className={styles.account}>
-      <div className={styles.account_name}>Account Name</div>
+      <div className={styles.account_name}>{account.name}</div>
       <div className={styles.account_id}>ID: {account.id}</div>
       <div className={styles.account_stage}>
         <div className={styles.current_stage}>{account.stage}</div>
-        <FontAwesomeIcon icon={faArrowRight} className={styles.icon} />
-        <div className={styles.predicted_stage}>Engage</div>
+        {account.stage !== account.prediction &&
+        <Fragment>
+          <FontAwesomeIcon icon={faArrowRight} className={styles.icon} />
+          <div className={styles.predicted_stage}>{account.prediction}</div>
+        </Fragment>}
       </div>
       <div className={styles.account_info}>
+        <div className={styles.data}>Year: {account.year}</div>
         <div className={styles.data}>Manager: {account.manager}</div>
         <div className={styles.data}>Stage: {account.stage}</div>
         <div className={styles.data}>Employees: {account.employees}</div>

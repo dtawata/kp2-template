@@ -1,7 +1,7 @@
 import styles from './App.module.css';
 import React from 'react';
-import Search from './search/Search.js';
 import Header from './Header.js';
+import Search from './search/Search.js';
 
 const App = (props) => {
   return (

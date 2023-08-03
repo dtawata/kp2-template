@@ -3,7 +3,6 @@ import React from 'react';
 
 const Sidebar = (props) => {
   const { accounts, account, changeAccount } = props;
-  console.log('accounts', accounts);
 
   return (
     <div className={styles.container}>

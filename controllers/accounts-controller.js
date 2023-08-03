@@ -7,7 +7,6 @@ const getAccounts = async (req, res) => {
 
 const getDynamicAccounts = async (req, res) => {
   const { query } = req;
-  console.log('query', query);
   let queryString = 'SELECT accounts.*, managers.name AS manager, recommendations.prediction FROM accounts INNER JOIN managers ON accounts.manager_id = managers.id INNER JOIN recommendations ON recommendations.account_id = accounts.id';
   const queryArgs = [];
   const map = {

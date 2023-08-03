@@ -35,10 +35,6 @@ const Search = (props) => {
     });
   };
 
-  useEffect(() => {
-    console.log('accounts', accounts);
-  }, [accounts])
-
   return (
     <div className={styles.container}>
       <div className={styles.examples}>Managers: Ginny, Jonathan, Ashley, James, Sakura</div>

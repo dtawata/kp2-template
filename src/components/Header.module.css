@@ -1,0 +1,91 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  cursor: pointer;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+}
+
+.header li {
+  margin: 0 25px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 1px;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 1px;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.iconContainer {
+  position: relative;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.qty {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ff1644;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.login {
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 1px;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.soon {
+  position: relative;
+}
+
+.comingsoon {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100px;
+  color: red;
+  font-size: 12px;
+}

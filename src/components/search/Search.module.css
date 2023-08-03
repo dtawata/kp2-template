@@ -1,0 +1,113 @@
+.container {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.input {
+  margin: 0 10px;
+  padding: 8px 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  color: #444;
+  font-size: 14px;
+  outline: none;
+}
+
+.select {
+  width: 160px;
+  margin: 0 10px;
+  padding: 8px 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  color: #444;
+  font-size: 14px;
+  outline: none;
+}
+
+.button {
+  width: 160px;
+  margin: 0 10px;
+  padding: 8px 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  color: #444;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+}
+
+.accounts {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+  margin: 15px 1%;
+  padding: 25px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.account:hover {
+  transform: scale(1.05);
+}
+
+.account_name {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.account_id {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.account_stage {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.current_stage {
+  width: 100px;
+  margin-right: 10px;
+  padding: 5px 0;
+  background-color: #444;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.predicted_stage {
+  width: 100px;
+  padding: 5px 0;
+  background-color: #1285ed;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.account_info {
+  margin-top: 15px;
+}
+
+.data {
+  margin: 10px 0;
+  font-size: 16px;
+}

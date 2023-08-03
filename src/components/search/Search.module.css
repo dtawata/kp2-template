@@ -3,6 +3,12 @@
   font-size: 20px;
 }
 
+.examples {
+  margin: 0 0 15px 10px;
+  font-size: 14px;
+  font-style: italic;
+}
+
 .input {
   margin: 0 10px;
   padding: 8px 10px;

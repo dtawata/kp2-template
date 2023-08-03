@@ -6,7 +6,13 @@
   border-bottom: 1px solid #eee;
 }
 
+.left {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
+  margin-right: 20px;
   cursor: pointer;
   font-size: 20px;
   font-style: italic;
@@ -21,8 +27,9 @@
 }
 
 .header li {
-  margin: 0 25px;
+  margin: 0 8px;
   cursor: pointer;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
   list-style: none;

@@ -2,7 +2,7 @@ import styles from './Search.module.css';
 import React, { Fragment, useState, useRef, useEffect, useReducer } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Search = (props) => {
   const [options, setOptions] = useState({
@@ -41,6 +41,7 @@ const Search = (props) => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.examples}>Managers: Ginny, Jonathan, Ashley, James, Sakura</div>
       <form>
         <input onChange={handleChange} className={styles.input} type='text' name='manager' value={options.manager} placeholder='Account Manager' />
         <input onChange={handleChange} className={styles.input} type='number' name='year' value={options.year} placeholder='Year' />

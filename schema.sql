@@ -38,14 +38,16 @@ INSERT INTO managers (name) VALUES
 ('Sakura'),
 ('James');
 
-
 INSERT INTO accounts (name, manager_id, stage, employees, zipcode, year) VALUES
 ('AI Company', 1, 'Familiarize', 75, 90812, 2023),
 ('Tech Central', 2, 'Initiate', 800, 93413, 2022),
 ('Sports Insight', 3, 'Engage', 56, 34512, 2022),
 ('Company 213', 4, 'Familiarize', 89, 12345, 2021),
 ('Osaka', 5, 'Initiate', 124, 12345, 2020),
-('Paris', 1, 'Initiate', 240, 12345, 2020);
+('Paris', 1, 'Initiate', 290, 12345, 2020),
+('Cereal Company', 5, 'Initiate', 14, 12345, 2023),
+('eBooks', 2, 'Familiarize', 59, 12345, 2019),
+('Learn Guitar', 1, 'Initiate', 407, 12345, 2022);
 
 INSERT INTO recommendations (account_id, prediction) VALUES
 (1, 'Initiate'),
@@ -53,4 +55,7 @@ INSERT INTO recommendations (account_id, prediction) VALUES
 (3, 'Engage'),
 (4, 'Initiate'),
 (5, 'Initiate'),
-(6, 'Engage');
+(6, 'Engage'),
+(7, 'Initiate'),
+(8, 'Initiate'),
+(9, 'Engage');
